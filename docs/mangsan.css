@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body, html {
+  width: 100%; height: 100%;
+  border: 0; padding: 0; margin: 0;
+  font-family: Roboto, Helvetica, Arial, "Open Sans", "Noto Sans TC", "Noto Sans CJK TC", "微軟正黑體", "Microsoft JhengHei", Meiryo, sans-serif;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+#name {
+  position: absolute;
+  left: 50%; top: 50%; 
+  width: fit-content;
+  height: fit-content;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  text-shadow: #FFF 0 0 0.25em;
+}
+
+#name:focus, #name:hover {
+  border: 1px dashed #CCC;
+}
+
+hr {
+  width: 90%;
+  width: calc(100% - 10em);
+  border: none;
+  background: transparent;
+  border-top: 1px dashed #888;
+}
+
+footer {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+#background {
+  z-index: -1;
+  position: static;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+}
