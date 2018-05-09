@@ -23,7 +23,7 @@
   const trianglify = (() => {
     if(!window.Trianglify)
       return function(seed) {};
-    let trianglify, timer, lastSeed = null, firstRun;
+    let trianglify, timer, lastSeed = null, blobUrl, firstRun;
     function run(seed) {
       if(timer) timer = undefined;
       if(!seed) seed = lastSeed;
@@ -35,12 +35,19 @@
       };
       trianglify = trianglify ?
         Trianglify(Object.assign(trianglify.opts, opts)) : Trianglify(opts);
-      document.body.style.backgroundImage = `url(${trianglify.png()})`;
+
+      if(blobUrl) URL.revokeObjectURL(blobUrl);
+      const svg = trianglify.svg({ includeNamespace: true });
+      svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      blobUrl = URL.createObjectURL(new Blob(
+        [svg.outerHTML], { type: 'image/svg+xml' }
+      ));
+      document.body.style.backgroundImage = `url(${blobUrl})`;
     }
     return function(seed) {
       if(timer)
         clearTimeout(timer);
-      if(!firstRun)
+      if(!firstRun || (seed && lastSeed !== seed))
         run(seed);
       else
         timer = setTimeout(run, 200, seed);

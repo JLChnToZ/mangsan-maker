@@ -22,13 +22,13 @@ do not copy the hashes while sharing, everything will be fine.
 Snapshots / Demos
 -----------------
 - With some random Latin letters (ABCDE)
-  [![ABCDE](previews/1.png)](https://code.moka-rin.moe/mangsan-maker/?ABCDE)
+  [![ABCDE](previews/1.png)](https://msmk.moka-rin.moe/?ABCDE)
 - With some random Chinese characters (紙包雞)
-  [![紙包雞](previews/2.png)](https://code.moka-rin.moe/mangsan-maker/?%E7%B4%99%E5%8C%85%E9%9B%9E)
+  [![紙包雞](previews/2.png)](https://msmk.moka-rin.moe/?%E7%B4%99%E5%8C%85%E9%9B%9E)
 - With some random English words (Foo, Bar, Baz)
-  [![Foo Bar Baz](previews/3.png)](https://code.moka-rin.moe/mangsan-maker/?Foo&Bar&Baz)
+  [![Foo Bar Baz](previews/3.png)](https://msmk.moka-rin.moe/?Foo&Bar&Baz)
 - With some random Japanese characters (バナナ)
-  [![バナナ](previews/4.png)](https://code.moka-rin.moe/mangsan-maker/?%E3%83%90%E3%83%8A%E3%83%8A)
+  [![バナナ](previews/4.png)](https://msmk.moka-rin.moe/?%E3%83%90%E3%83%8A%E3%83%8A)
 
 License
 -------
