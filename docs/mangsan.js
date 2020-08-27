@@ -100,6 +100,7 @@
       value2.push(value % text.length);
       value = Math.trunc(value / text.length);
     }
+    if(!value2.length) value2.push(0);
     return element.textContent = value2.map(getIndex, text).join(joinStr);
   }
 
