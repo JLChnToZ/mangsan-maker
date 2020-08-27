@@ -91,12 +91,16 @@
 
   function parse({ l: length, v: value }) {
     if(!Number.isSafeInteger(length) || !Number.isSafeInteger(value)) return;
-    value = value.toString(base);
-    value = length > value.length ?
-      '0'.repeat(length - value.length) + value :
-      value.substr(-length);
     trianglify(`${length}/${value}`);
-    return element.textContent = value.split('').map(getIndex, text).join(joinStr);
+    const value2 = [];
+    if(text.length < 2) {
+      for(let i = 0; i < length; i++)
+        value.push(0);
+    } else while(value >= 1) {
+      value2.push(value % text.length);
+      value = Math.trunc(value / text.length);
+    }
+    return element.textContent = value2.map(getIndex, text).join(joinStr);
   }
 
   function generate(replace) {
